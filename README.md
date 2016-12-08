@@ -15,9 +15,11 @@ Donations
 
 This software is open-source and absolutely free, even for commercial use.
 
-If you think Artisan is worth of some money and you are willing to contribute financially to its further development, feel free to send any amount through PayPal.
+If you think Artisan is worth of some money and you are willing to contribute financially to its further development, feel free to send any amount through PayPal via this button in EUR
 
 [![](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=N5WW9UN6K669L)
+
+or via my [PayPal.Me page](https://www.paypal.me/MarkoLuther)
 
 
 
@@ -104,7 +106,7 @@ Version History
 
 | Version | Date | Comment |
 |---------|------|---------|
-| v1.0.0 | XX.XX.XXXX | Adds internal software PID, external MODBUS PID control, Apollo DT301, Extech 755, fast MODBUS RTU, bug fixes and stability improvements |
+| v1.0.0 | XX.XX.XXXX | Adds internal software PID, external MODBUS PID control, Apollo DT301, Extech 755, fast MODBUS RTU, AUC, RPi build, bug fixes and stability improvements |
 | v0.9.9 | 14.03.2016 | Adds batch and ranking reports, batch conversions, follow-background for Fuji PIDs, additional keyboard short cuts, designer improvements, bug fixes |
 | v0.9.8 | 21.10.2015 | US weight and volume units, extended [symbolic formulas and plotter](http://artisan-roasterscope.blogspot.de/2015/10/signals-symbolic-assignments-and-plotter.html), [ln()/x^2 approximations](http://artisan-roasterscope.blogspot.de/2015/10/natural-roasts.html), bug fixes |
 | v0.9.7 | 29.07.2015 | Bug fixes |

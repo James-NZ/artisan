@@ -7,7 +7,7 @@ v1.0.0 (XX.XX.2016)
 ------------------
 
  * New Features
-    * adds internal PID and support to control external MODBUS PIDs
+    * adds [internal PID](https://artisan-roasterscope.blogspot.de/2016/11/pid-control.html) and support to control external MODBUS PIDs
     * adds two more MODBUS input channels (now 6 in total)
     * adds alarms triggerd at a specified time after another alarm specified as "If Alarm" was triggered, if "from" rules is set to "If Alarm"    
     * adds improved Windows installer (option to uninstall previous versions during installation and silent option)
@@ -32,10 +32,11 @@ v1.0.0 (XX.XX.2016)
     * adds a field for green bean temperature
     * adds p-i-d button action    
     * adds auto axis limits calculation via manual trigger or automatic on load
-    * adds AUC statistics, LCD and guide
+    * adds [AUC statistics, LCD and guide](https://artisan-roasterscope.blogspot.de/2016/11/area-under-curve-auc.html)
     * adds possibility to "clamp" by-value custom events to the x-axis in the range of 0-100
-    * adds support for MODBUS mask-write method (function code 22)
+    * adds support for MODBUS mask-write (mwrite; function code 22) and write registers (writem; function code 16) methods
     * adds Raspberry Pi (Jessy) build
+    * adds color labels to HTM ranking reports
  * Changes
     * dramatically improves speed of MODBUS over serial communication (by patching the underlying pymodbus lib)
     * makes message, error and serial logs autoupdating
@@ -65,7 +66,9 @@ v1.0.0 (XX.XX.2016)
     * fixes handling of accent characters in autosave path
 	* improves handling of external program calls
     * various stability improvements
-    
+    * fixes hang on RESET serial action
+    * fixes Phidgets remote access on Python 3
+
 ----
 v0.9.9 (14.03.2016)
 ------------------
@@ -180,8 +183,8 @@ v0.9.5 (6.7.2015)
  * Bug Fixes
    * fixed Yocto build issue on Mac OS X
    * fixed a redraw bug introduced in v0.9.4
-   
-   
+
+
 **Note**
 _This is the latest version supporting the Windows Celeron platform and Mac OS X 10.6 (Intel only)_
 
@@ -200,7 +203,7 @@ v0.9.4 (6.6.2015)
    * fixed element order in legend
    * fixed WebLCDs
    * fixes to Fuji PXR "RampSoak ON" mechanism
-   
+
 
 ----
 v0.9.3 (15.1.2015)
@@ -223,9 +226,9 @@ v0.9.3 (15.1.2015)
    * fixes Yocto shared libary loading on Windows and improves the reconnect on reset
    * missing quantifiers application on START
    * TC4 "Start PID on CHARGE" now works on consequtive roasts
-   * TC4 enable ArduinoTC4_56 and ArduinoTC4_78 extra device use without adding ArduinoTC4_34 
+   * TC4 enable ArduinoTC4_56 and ArduinoTC4_78 extra device use without adding ArduinoTC4_34
    * MODBUS communication improvements
-   
+
 
 ----
 v0.9.2 (16.1.2015)
@@ -458,7 +461,7 @@ v0.7.0 (30.11.2013)
    * adds an option to remove digits from temperature LCDs (extras dialog)
    * adds Hebrew localization
  * Changes
-   * curve smoothing settings sensitivity has been doubled (for some internal reasons). So a value of 6 on Artisan v0.6 should be adjusted to 3 to have roughly the same effect. 
+   * curve smoothing settings sensitivity has been doubled (for some internal reasons). So a value of 6 on Artisan v0.6 should be adjusted to 3 to have roughly the same effect.
    * autosave now takes the roast name from the roast properties and autosaves on OFF. Further, the date is now written as prefix
    * preserves autosave ON/OFF state over app restarts
    * x/y mouse pointer coordinate display now always displays temperatures and not temperature deltas if the RoR axis is active
@@ -632,7 +635,7 @@ v0.5.2 (23.7.2011)
 ----
 v0.5.1 (18.6.2011)
 ------------------
- 
+
  * bug fixes
 
 ----
@@ -789,7 +792,7 @@ v0.2.1 (02.01.2011)
 v0.2.0 (31.12.2010)
 -------------------
 
- * added support for 
+ * added support for
   * CENTER 300, 301, 302, 303, 304, 305, 306
   * VOLTCRAFT K202, K204, 300K, 302KJ
   * EXTECH 421509
